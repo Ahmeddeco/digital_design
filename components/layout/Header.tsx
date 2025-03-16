@@ -1,24 +1,28 @@
-import Image from 'next/image'
-import Logo from '../../public/images/logo.webp'
 import Link from 'next/link'
+import ThemeSwitcher from '../theme/ThemeSwitcher'
+import Logo from './Logo'
+import { NavLinks } from '@/constants/navLinks'
+import { gluten } from '@/styles/fonts'
+import NavLink from './NavLink'
+import MobileNav from './MobileNav'
 
 const Header = () => {
 	return (
-		<header className='h-16 fixed z-50 right-0 top-0 left-0 bg-red-500 '>
-			<div className='container mx-auto bg-green-800 h-full flex items-center justify-between'>
+		<header className='h-16 fixed z-50 right-0 top-0 left-0 bg-background/95  '>
+			<div className='container mx-auto flex items-center justify-between border-b py-2'>
 				{/* logo */}
-				<Link href={'/'}>
-					<div className='size-12 relative'>
-						<Image src={Logo} alt={'Logo'} fill />
-					</div>
-				</Link>
-				<nav className='hidden lg:flex items-center justify-center gap-4'>
-					<Link href={'/'}>home</Link>
-					<Link href={'/'}>home</Link>
-					<Link href={'/'}>home</Link>
-					<Link href={'/'}>home</Link>
+				<Logo />
+				{/* Desktop Nav */}
+				<nav className='hidden lg:flex items-center justify-center gap-8'>
+					<NavLink />
 				</nav>
-				<div className=''>Button</div>
+				{/* Mobile Nav */}
+				<div className='flex items-center justify-center gap-4'>
+					<ThemeSwitcher />
+					<div>
+						<MobileNav />
+					</div>
+				</div>
 			</div>
 		</header>
 	)

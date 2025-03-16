@@ -16,8 +16,8 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang='en' suppressHydrationWarning>
-			<body className={`${roboto.className}  antialiased scroll-smooth container mx-auto`}>
+		<html lang='en' suppressHydrationWarning className='scroll-smooth duration-500'>
+			<body className={`${roboto.className}  antialiased container mx-auto`}>
 				<ThemeProvider
 					attribute='class'
 					defaultTheme='system'
@@ -25,7 +25,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					<Header />
-					<main className='min-h-dvh bg-blue-700 mt-16 pt-8'>{children}</main>
+					<main className='min-h-dvh scroll-smooth'>{children}</main>
 					<Footer />
 				</ThemeProvider>
 			</body>
