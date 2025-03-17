@@ -25,7 +25,7 @@ export default function RootLayout({
 					disableTransitionOnChange
 				>
 					<Header />
-					<main className='min-h-dvh scroll-smooth'>{children}</main>
+					<main className='min-h-dvh scroll-smooth pt-16'>{children}</main>
 					<Footer />
 				</ThemeProvider>
 			</body>

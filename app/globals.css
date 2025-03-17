@@ -47,14 +47,14 @@
 	--color-color-3: var(----color-3);
 	--color-color-2: var(----color-2);
 	--color-color-1: var(----color-1);
-  --animate-rainbow: rainbow var(--speed, 2s) infinite linear;
+	--animate-rainbow: rainbow var(--speed, 2s) infinite linear;
 
-  @keyframes rainbow {
-    0% {
-      background-position: 0%;
+	@keyframes rainbow {
+		0% {
+			background-position: 0%;
 		}
-    100% {
-      background-position: 200%;
+		100% {
+			background-position: 200%;
 		}
 	}
 }
@@ -144,5 +144,27 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+
+	h1 {
+		@apply text-7xl lg:text-8xl font-bold;
+	}
+	h2 {
+		@apply text-6xl lg:text-7xl font-semibold;
+	}
+	h3 {
+		@apply text-5xl lg:text-6xl font-medium;
+	}
+	h4 {
+		@apply text-4xl lg:text-5xl font-normal;
+	}
+	h5 {
+		@apply text-3xl lg:text-4xl font-light;
+	}
+	h6 {
+		@apply text-2xl lg:text-3xl font-extralight;
+	}
+	p {
+		@apply text-sm lg:text-lg font-thin;
 	}
 }

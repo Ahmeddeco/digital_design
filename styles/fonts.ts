@@ -9,3 +9,8 @@ export const roboto = localFont({
 
 })
 
+export const gummy = localFont({
+  src: '../public/fonts/SourGummy.ttf',
+
+})
+
